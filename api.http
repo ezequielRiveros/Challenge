@@ -1,0 +1,53 @@
+### Variables
+@baseUrl = http://localhost:3000
+
+### Obtener portfolio de un usuario
+GET {{baseUrl}}/portfolio/1
+
+### Buscar instrumentos
+GET {{baseUrl}}/instruments/search?query=MACRO
+
+### Crear una orden de mercado (MARKET)
+POST {{baseUrl}}/orders
+Content-Type: application/json
+
+{
+  "instrumentId": 1,
+  "userId": 1,
+  "side": "BUY",
+  "size": 10,
+  "type": "MARKET"
+}
+
+### Crear una orden límite (LIMIT)
+POST {{baseUrl}}/orders
+Content-Type: application/json
+
+{
+  "instrumentId": 1,
+  "userId": 1,
+  "side": "BUY",
+  "size": 10,
+  "price": 150.50,
+  "type": "LIMIT"
+}
+
+### Crear una orden por monto total
+POST {{baseUrl}}/orders
+Content-Type: application/json
+
+{
+  "instrumentId": 1,
+  "userId": 1,
+  "side": "BUY",
+  "totalAmount": 1500,
+  "type": "MARKET"
+}
+
+### Cancelar una orden
+POST {{baseUrl}}/orders/17/cancel
+Content-Type: application/json
+
+{
+  "userId": 1
+} 
