@@ -20,7 +20,7 @@ API REST desarrollada en NestJS para gestionar operaciones de trading, incluyend
 1. Clonar el repositorio:
 ```bash
 git clone <repository-url>
-cd pepe
+cd Challenge
 ```
 
 2. Instalar dependencias:
